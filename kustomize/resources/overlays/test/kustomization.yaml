@@ -1,5 +1,4 @@
 namespace: op4-kustomize-test
 resources:
 - ../../base
-- namespace.yaml
 - ingress.yaml
