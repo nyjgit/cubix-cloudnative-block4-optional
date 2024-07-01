@@ -5,14 +5,20 @@ metadata:
   namespace: op4-kube-frontend
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
   template:
+    metadata:
+      labels:
+        app: frontend
     spec:
       containers:
       - name: frontend
         image: quay.io/drsylent/cubix/block4/optional-frontend:springboot3
         env:
         - name: BACKEND_URL
-          value: http://backend:8080
+          value: http://backend.op4-kube-backend:8080
         ports:
         - containerPort: 8080
           name: web
