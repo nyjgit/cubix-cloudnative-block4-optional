@@ -2,9 +2,6 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-env:
-- name: FRONTEND_DEFAULT_MESSAGE
-  value: "overwritten value"
 
 replicaCount: 1
 
